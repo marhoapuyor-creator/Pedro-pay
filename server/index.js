@@ -6,10 +6,11 @@ app.use(express.json())
 
 app.get('/', (req, res) => {
   res.json({ message: 'Pedro Pay API dey live! 🚀' })
+            })
+app.get('/users', (req, res) => {
+  res.json({ message: "Users endpoint dey work!" })
 })
 
-// connect your routes here later
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
+app.get('/payments', (req, res) => {
+  res.json({ message: "Payments endpoint dey work!" })
 })
