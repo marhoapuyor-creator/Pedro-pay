@@ -17,3 +17,12 @@ app.get('/payments', (req, res) => {
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Pedro Pay API running on port ${PORT}`)
 })
+// This goes with your other app.get routes
+app.get('/pay/:username', (req, res) => {
+  const username = req.params.username;
+  res.send(`
+    <h1>Pay ${username}</h1>
+    <p>Send money to: ${username}</p>
+    <button>Pay Now</button>
+  `);
+});
